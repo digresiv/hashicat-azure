@@ -102,6 +102,11 @@ resource "azurerm_virtual_machine" "catapp" {
 
   
   }
+    
+  tags = {
+    Billable = "true"
+    Department = "devops"
+  }
 
   storage_os_disk {
     name              = "${var.prefix}-osdisk"
