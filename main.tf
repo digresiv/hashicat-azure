@@ -99,6 +99,11 @@ resource "azurerm_virtual_machine" "catapp" {
     offer     = var.image_offer
     sku       = var.image_sku
     version   = var.image_version
+    
+  tags = {
+    Billable = "true"
+    Department = "devops"
+  }
   }
 
   storage_os_disk {
