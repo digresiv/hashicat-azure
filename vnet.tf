@@ -1,6 +1,3 @@
-provider "azurerm" {
-  features {}
-}
 
 resource "azurerm_resource_group" "example" {
   name     = "my-resources"
@@ -18,6 +15,4 @@ module "network" {
     environment = "dev"
     costcenter  = "it"
   }
-
-  depends_on = [azurerm_resource_group.example]
 }
